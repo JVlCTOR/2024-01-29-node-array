@@ -9,7 +9,7 @@ POST  http://localhost:5005/produto
 Content-Type: application/json
 
 {
-    "id": 234,
+    "id": 1,
     "nome": "produdo 1",
     "valor": 200,
     "off": 12
@@ -19,4 +19,4 @@ Content-Type: application/json
 
 // Buscar produto por ID
 
-GET http://localhost:5005/produto/234
+GET http://localhost:5005/produto/54
