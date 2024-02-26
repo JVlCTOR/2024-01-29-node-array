@@ -13,8 +13,10 @@ fastify.get('/', (req, res) => {
 fastify.get(`/produtos`, produtoService.buscarProdutos)
 fastify.get(`/produto/:id`, produtoService.buscaProtudosID)
 fastify.post(`/produto`, produtoService.criarProtudo)
-fastify.patch(`/produto/:id`, produtoService.atualizarProtudo)
+fastify.put(`/produto/:id`, produtoService.atualizarProtudo)
+fastify.patch(`/produto/:id`, produtoService.atualizarProtudoParcial)
 fastify.delete(`/produto/:id`,produtoService.deletarProtudo)
+fastify.delete(`/produtos`,produtoService.deleteAll)
 
 fastify.listen({ port:PORT }, (err, address) => {
     if (err){

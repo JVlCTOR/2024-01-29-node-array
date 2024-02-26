@@ -10,7 +10,7 @@ Content-Type: application/json
 
 {
     "id": 1,
-    "nome": "produdo 1",
+    "nome": "produdo 3",
     "valor": 200,
     "off": 12
 }
@@ -19,4 +19,20 @@ Content-Type: application/json
 
 // Buscar produto por ID
 
-GET http://localhost:5005/produto/54
+GET http://localhost:5005/produto/2
+
+###
+// atulizar prudto
+PATCH   http://localhost:5005/produto/2
+Content-Type: application/json
+
+{
+    "nome": "produdo 1 atulizar",
+    "valor": 240
+}
+###
+//remover todos
+DELETE http://localhost:5005/produtos
+###
+// remover por id 
+DELETE http://localhost:5005/produto/2
