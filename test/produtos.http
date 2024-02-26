@@ -9,8 +9,6 @@ POST  http://localhost:5005/produto
 Content-Type: application/json
 
 {
-    "id": 1,
-    "nome": "produdo 3",
     "valor": 200,
     "off": 12
 }

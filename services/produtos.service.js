@@ -16,8 +16,23 @@ export const produtoService = {
     }
   },
   criarProtudo: (req, res) => {
-    let produto = req.body;
-    return produtos.push(produto);
+        let idNext = produtos.length +1
+    const {preco, off} = req.body
+    let produtoBD = {
+        id: idNext,
+        produto: `Produto ${idNext}`,
+        preco,
+        off
+    }
+    return produtos.push(produtoBD)
+    // let produto = req.body;
+    // let id = produtos.length +1
+
+    // req.body.id = id
+    // req.body.nome = `Produto ${id}`
+
+    // return produtos.push(produto);
+
   },
   atualizarProtudo: (req, res) => {},
   atualizarProtudoParcial: (req, res) => {
